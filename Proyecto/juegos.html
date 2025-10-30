@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Juegos — Más allá de la pantalla</title>
+  <link rel="stylesheet" href="css/infoo.css" />
+  <link rel="stylesheet" href="css/juegos.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brandwrap">
+      <button id="hamb" class="hamb">☰</button>
+      <h1 class="brand">Más allá de la pantalla</h1>
+    </div>
+    <nav id="nav" class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="historia.html">Historia</a>
+      <a href="creadores.html">Creadores</a>
+      <a href="Perifericos.html">Perifericos</a>
+      <a href="componentes.html">Componentes</a>
+      <a href="placa.html">Placa Madre</a>
+      <a href="juegos.html" class="active">Juegos</a>
+    </nav>
+  </header>
+
+  <main class="container games-page">
+    <h2 class="title">Zona de juegos — Divertite aprendiendo</h2>
+    <p class="lead">Seleccioná un juego. Cada juego es desafiante — probá tus conocimientos de hardware.</p>
+
+    <section class="game-select" aria-label="Seleccion de juegos">
+      <button class="game-btn" data-game="quiz">Quiz avanzado</button>
+      <button class="game-btn" data-game="memotest">Memotest</button>
+      <button class="game-btn" data-game="match">Matching</button>
+      <button class="game-btn" data-game="hangman">Ahorcado</button>
+    </section>
+
+    <!-- Contenedor único donde se carga un solo juego a la vez -->
+    <section id="game-container" class="game-container" aria-live="polite">
+      <div class="placeholder">🎮 Seleccioná un juego para empezar</div>
+    </section>
+
+    <!-- Historial compacto (si querés mostrarlo dentro del contenido; HUD principal es fijo arriba) -->
+    <aside class="score-board" aria-label="Historial de Puntajes">
+      <h3>🏆 Historial (records)</h3>
+      <ul id="scoreList"></ul>
+    </aside>
+  </main>
+
+  <!-- HUD fijo arriba a la derecha (records) -->
+  <div id="scoreHUD" class="score-hud" aria-hidden="false"></div>
+
+  <!-- Toasts -->
+  <div id="toast-root"></div>
+
+  <footer class="footer container">
+    <p>Proyecto escolar — Más allá de la pantalla © 2025</p>
+  </footer>
+
+  <!-- Script de juegos (colocar en la misma carpeta) -->
+  <script src="js/juegos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+
+.game-select{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.game-btn{padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,#00e0ff,#7cf5ff);border:none;cursor:pointer;font-weight:700}.game-area{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;margin-top:10px}.hidden{display:none !important}.memo-board{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px}.memo-card{background:rgba(255,255,255,0.03);height:90px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer}.dd-area{display:flex;gap:12px;flex-wrap:wrap}.parts{min-width:160px}.part-item{padding:8px;border-radius:8px;background:rgba(255,255,255,0.03);cursor:grab}.targets{flex:1}.target-slot{border:2px dashed rgba(255,255,255,0.06);min-height:60px;border-radius:8px;display:flex;align-items:center;justify-content:center}.cooldown{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6)}.cooldown__box{background:#071024;padding:18px;border-radius:10px;color:#9fbdd6}
+.score-board {
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.score-board h3 {
+  margin-bottom: 10px;
+  color: #7cf5ff;
+}
+.score-board li {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 4px 0;
+  color: #9fbdd6;
+}
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #16ffc1;
+  color: #06101a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  z-index: 999;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.game-container {
+  min-height: 300px;
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 10px;
+  position: relative;
+}
+.placeholder {
+  color: #9fbdd6;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.fade.show {
+  opacity: 1;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #16ffc1;
+  color: #06101a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  z-index: 999;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.score-board {
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.score-board h3 {
+  margin-bottom: 10px;
+  color: #7cf5ff;
+}
+.score-board li {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 4px 0;
+  color: #9fbdd6;
+}
+
+.game-container {
+  min-height: 300px;
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 10px;
+  position: relative;
+}
+.placeholder {
+  color: #9fbdd6;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* HUD de puntajes */
+.score-hud {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #7cf5ff;
+  z-index: 1000;
+}
+.score-hud h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #16ffc1;
+}
+.score-hud ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.score-hud li {
+  margin: 2px 0;
+  font-size: 13px;
+}
+
+/* Toast (notificación) */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #16ffc1;
+  color: #06101a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  z-index: 999;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === QUIZ Animations & Styles === */
+.quiz-options {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quiz-options button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.08);
+  color: #e6f3fb;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.quiz-options button:hover {
+  background: var(--accent);
+  color: #041020;
+}
+
+.correct {
+  background: #16ffc1 !important;
+  animation: glow 0.6s ease;
+}
+
+.incorrect {
+  background: #ff4d6d !important;
+  animation: shake 0.4s ease;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 0px #16ffc1; }
+  100% { box-shadow: 0 0 20px #16ffc1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.quiz-timer {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+
+
+
+
+
+/* ---------- reglas mínimas si tu CSS no define hidden -------------- */
+.hidden { display: none !important; }
+
+/* Contenedor de juego (no pisa tu estilo global) */
+.game-container {
+  min-height: 360px;
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 10px;
+  position: relative;
+  overflow: visible;
+}
+.placeholder { color: #9fbdd6; text-align:center; padding:40px 0; }
+
+/* HUD fijo arriba derecha */
+.score-hud {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  background: rgba(4,16,32,0.8);
+  padding: 10px 14px;
+  border-radius: 10px;
+  z-index: 1200;
+  color: #7cf5ff;
+  font-weight:700;
+  box-shadow: 0 6px 18px rgba(2,8,20,0.45);
+}
+.score-hud h4 { margin:0 0 6px 0; color: #16ffc1; font-size:13px; }
+.score-hud ul { margin:0; padding:0; list-style:none; font-size:13px; color:#cfeff4; }
+.score-hud li { margin:2px 0; }
+
+/* Toasts */
+#toast-root { position: fixed; bottom: 20px; right: 20px; z-index:1300; }
+.toast {
+  background:#16ffc1; color:#04101a; padding:10px 14px; border-radius:8px; margin-top:8px;
+  transform: translateY(12px); opacity:0; transition: all .32s ease; font-weight:800;
+  box-shadow: 0 8px 20px rgba(1,10,20,0.45);
+}
+.toast.show { transform: translateY(0); opacity:1; }
+
+/* Buttons de opciones (quiz) */
+.quiz-timer { color: var(--accent, #7cf5ff); font-weight:800; margin-bottom:8px; }
+.quiz-options { display:grid; gap:10px; grid-template-columns:1fr; margin-top:10px; }
+.quiz-options button {
+  padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.03); color: inherit; font-weight:700; cursor:pointer;
+  transition: all .28s ease;
+}
+.quiz-options button:hover { transform: translateY(-3px); }
+.quiz-options button.correct { background: linear-gradient(90deg,#16ffc1,#9fffbf); color:#041020; box-shadow:0 8px 20px rgba(22,255,193,0.08); }
+.quiz-options button.incorrect { background: linear-gradient(90deg,#ff6b7a,#ff9aa3); color:#fff; animation: shake .4s; }
+
+/* shake animation */
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+/* MEMOTEST: flip card */
+.memo-grid { display:grid; grid-template-columns: repeat(6, 1fr); gap:10px; justify-items:center; align-items:center; max-width:720px; margin:0 auto; }
+.flip-card { width:100px; height:120px; perspective:800px; cursor:pointer; }
+.flip-inner { position:relative; width:100%; height:100%; transition: transform .6s; transform-style: preserve-3d; border-radius:8px; }
+.flip-inner.flipped { transform: rotateY(180deg); }
+.flip-front, .flip-back {
+  position:absolute; width:100%; height:100%; backface-visibility:hidden; display:flex; align-items:center; justify-content:center; border-radius:8px;
+  background: rgba(255,255,255,0.03); font-weight:800; font-size:14px; color: #e6f3fb;
+}
+.flip-back { transform: rotateY(180deg); background: linear-gradient(90deg,#00e0ff,#7cf5ff); color:#041020; }
+
+/* bounce when wrong drop */
+.bounce { animation: bounce .6s cubic-bezier(.36,.07,.19,.97); }
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-18px) rotate(-6deg); }
+  60% { transform: translateY(6px) rotate(4deg); }
+  100% { transform: translateY(0); }
+}
+
+/* drag/drop parts */
+.dd-area { display:flex; gap:18px; flex-wrap:wrap; margin-top:12px; align-items:flex-start; }
+.parts { min-width:200px; display:flex; gap:10px; flex-wrap:wrap; }
+.part-item { padding:8px 10px; border-radius:8px; border:1px solid rgba(255,255,255,0.05); cursor:grab; background: rgba(255,255,255,0.02); }
+.target-slot { border:2px dashed rgba(255,255,255,0.05); min-height:72px; min-width:120px; padding:8px; border-radius:8px; display:flex; align-items:center; justify-content:center; }
+
+/* matching layout */
+.match-columns { display:flex; gap:18px; margin-top:12px; justify-content:center; }
+.match-column { display:flex; flex-direction:column; gap:8px; }
+.match-card { padding:10px; border-radius:8px; background: rgba(255,255,255,0.03); cursor:pointer; text-align:center; min-width:140px; }
+
+/* line drawing overlay (svg) */
+.match-overlay { position:absolute; inset:0; pointer-events:none; z-index:50; }
+
+/* ahorcado svg parts style */
+.hang-svg { width:220px; height:260px; }
+.hang-part { stroke:#16ffc1; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; fill:none; opacity:0; transition: opacity .6s ease, stroke-dashoffset .7s ease; }
+.hang-part.drawn { opacity:1; stroke-dashoffset:0; }
+
+/* small responsive adjustments */
+@media (max-width:900px) {
+  .memo-grid { grid-template-columns: repeat(3, 1fr); }
+  .match-column { min-width:140px; }
+}
+
+
+
+.flip-back img, .part-item img {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.part-item img {
+  width: 100px;
+}

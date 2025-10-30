@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Historia del hardware</title>
+  <link rel="stylesheet" href="css/info.css" />
+  <style>
+    .ficha {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .ficha img {
+      width: 220px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .ficha .texto {
+      flex: 1;
+    }
+
+    /* Ocultamos todas las fichas por defecto */
+    .ficha {
+      display: none;
+    }
+
+    /* La que esté activa se muestra */
+    .ficha.active {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brandwrap"><button id="hamb" class="hamb">☰</button>
+      <h1 class="brand">Más allá de la pantalla</h1>
+    </div>
+    <nav id="nav" class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="historia.html" class="active">Historia</a>
+      <a href="creadores.html">Creadores</a>
+      <a href="Perifericos.html">Perifericos</a>
+      <a href="componentes.html">Componentes</a>
+      <a href="placa.html">Placa Madre</a>
+      <a href="juegos.html">Juegos</a>
+    </nav>
+  </header>
+
+  <main class="container timeline-page">
+    <h2 class="title">Historia completa del hardware</h2>
+    <p class="lead">Haz clic en cada década para leer un resumen amplio, su contexto, ejemplos y su impacto.</p>
+
+    <div class="timeline-grid">
+      <aside class="years">
+        <button class="year" data-year="1940">1940s</button>
+        <button class="year" data-year="1950">1950s</button>
+        <button class="year" data-year="1960">1960s</button>
+        <button class="year" data-year="1970">1970s</button>
+        <button class="year" data-year="1980">1980s</button>
+        <button class="year" data-year="1990">1990s</button>
+        <button class="year" data-year="2000">2000s</button>
+        <button class="year" data-year="2010">2010s</button>
+        <button class="year" data-year="2020">2020s</button>
+      </aside>
+
+      <section class="detail" id="hist-detail">
+        <h3>Seleccioná una década</h3>
+        <p>Aquí aparecerá la ficha completa con texto, datos y ejemplo.</p>
+
+        <!-- 1940 -->
+        <div class="ficha" id="decada-1940">
+          <img src="1940 a 2020/1940.jfif" alt="Computadora ENIAC">
+          <div class="texto">
+            <h3>Década de 1940</h3>
+            <p><strong>Contexto:</strong> En plena Segunda Guerra Mundial, la necesidad de cálculos rápidos llevó al
+              desarrollo de las primeras computadoras electrónicas.</p>
+            <p><strong>Ejemplos:</strong> ENIAC (EE. UU., 1945), Colossus (Reino Unido, 1943).</p>
+            <p><strong>Características:</strong> Usaban tubos de vacío, ocupaban salas enteras y necesitaban muchísima
+              energía.</p>
+            <p><strong>Impacto:</strong> Aunque eran experimentales, demostraron que las máquinas podían automatizar
+              tareas complejas y abrir el camino de la computación moderna.</p>
+          </div>
+        </div>
+
+        <!-- 1950 -->
+        <div class="ficha" id="decada-1950">
+          <img src="1940 a 2020/1950.jfif" alt="IBM 650">
+          <div class="texto">
+            <h3>Década de 1950</h3>
+            <p><strong>Contexto:</strong> Transición del tubo de vacío al transistor, que permitió equipos más pequeños,
+              rápidos y fiables.</p>
+            <p><strong>Ejemplos:</strong> IBM 650 (primera computadora producida en masa), UNIVAC I (primera computadora
+              comercial en EE. UU.).</p>
+            <p><strong>Características:</strong> Todavía grandes y costosas, pero más accesibles a universidades y
+              empresas.</p>
+            <p><strong>Impacto:</strong> Se democratizó el acceso a la computación en instituciones educativas y de
+              negocios, marcando el inicio de la era comercial.</p>
+          </div>
+        </div>
+
+        <!-- 1960 -->
+        <div class="ficha" id="decada-1960">
+          <img src="1940 a 2020/1960.jpg" alt="PDP-8">
+          <div class="texto">
+            <h3>Década de 1960</h3>
+            <p><strong>Contexto:</strong> La miniaturización avanzó y aparecieron las minicomputadoras.</p>
+            <p><strong>Ejemplos:</strong> PDP-8 (DEC), IBM System/360 (familia de computadoras compatibles entre sí).
+            </p>
+            <p><strong>Características:</strong> Más pequeñas que las de los 50, más baratas, usadas en laboratorios,
+              empresas y universidades.</p>
+            <p><strong>Impacto:</strong> Por primera vez la computación empezó a verse como una herramienta práctica y
+              no solo experimental.</p>
+          </div>
+        </div>
+
+        <!-- 1970 -->
+        <div class="ficha" id="decada-1970">
+          <img src="1940 a 2020/1970.jfif" alt="Apple I">
+          <div class="texto">
+            <h3>Década de 1970</h3>
+            <p><strong>Contexto:</strong> Surge la microinformática gracias al microprocesador (Intel 4004 en 1971).</p>
+            <p><strong>Ejemplos:</strong> Altair 8800 (1975), Apple I (1976), Commodore PET.</p>
+            <p><strong>Características:</strong> Computadoras personales rudimentarias, con carcasa sencilla y muchas
+              veces ensambladas por los usuarios.</p>
+            <p><strong>Impacto:</strong> Nace la idea de "PC en cada hogar", sembrando la semilla de la revolución
+              digital.</p>
+          </div>
+        </div>
+
+        <!-- 1980 -->
+        <div class="ficha" id="decada-1980">
+          <img src="1940 a 2020/1980.jfif" alt="IBM PC">
+          <div class="texto">
+            <h3>Década de 1980</h3>
+            <p><strong>Contexto:</strong> Boom de las computadoras personales. La informática deja de ser exclusiva de
+              científicos y llega a oficinas y hogares.</p>
+            <p><strong>Ejemplos:</strong> IBM PC (1981), Commodore 64 (1982), Macintosh (1984).</p>
+            <p><strong>Características:</strong> Uso de sistemas operativos como MS-DOS y los primeros entornos
+              gráficos.</p>
+            <p><strong>Impacto:</strong> Se establecieron los estándares que definirían la informática durante décadas.
+            </p>
+          </div>
+        </div>
+
+        <!-- 1990 -->
+        <div class="ficha" id="decada-1990">
+          <img src="1940 a 2020/1990.jfif" alt="Windows 95">
+          <div class="texto">
+            <h3>Década de 1990</h3>
+            <p><strong>Contexto:</strong> Internet se expande al público general, impulsando nuevas formas de
+              comunicación y comercio.</p>
+            <p><strong>Ejemplos:</strong> Windows 95, procesadores Pentium, primera PlayStation (1994).</p>
+            <p><strong>Características:</strong> PCs multimedia con CD-ROM, disquetes aún vigentes, aparición de la
+              World Wide Web.</p>
+            <p><strong>Impacto:</strong> La sociedad empieza a conectarse globalmente y se gestan las bases de la era
+              digital moderna.</p>
+          </div>
+        </div>
+
+        <!-- 2000 -->
+        <div class="ficha" id="decada-2000">
+          <img src="1940 a 2020/2000.avif" alt="iPod">
+          <div class="texto">
+            <h3>Década de 2000</h3>
+            <p><strong>Contexto:</strong> Explosión de la informática personal y portátil, con el auge de Internet de
+              banda ancha.</p>
+            <p><strong>Ejemplos:</strong> iPod (2001), laptops asequibles, Windows XP (2001), primeras redes sociales.
+            </p>
+            <p><strong>Características:</strong> Computadoras más rápidas y conectadas; telefonía móvil comienza a
+              volverse inteligente.</p>
+            <p><strong>Impacto:</strong> Integración del hardware con la vida cotidiana: música digital, redes y
+              comunicación en tiempo real.</p>
+          </div>
+        </div>
+
+        <!-- 2010 -->
+        <div class="ficha" id="decada-2010">
+          <img src="1940 a 2020/2010.jfif" alt="Smartphone">
+          <div class="texto">
+            <h3>Década de 2010</h3>
+            <p><strong>Contexto:</strong> El smartphone y la computación en la nube transforman la forma en que vivimos.
+            </p>
+            <p><strong>Ejemplos:</strong> iPhone, Android, tablets, servicios como Google Drive y Netflix.</p>
+            <p><strong>Características:</strong> Dispositivos móviles con múltiples funciones, acceso constante a
+              Internet y aplicaciones.</p>
+            <p><strong>Impacto:</strong> La informática se volvió omnipresente, conectando a miles de millones en tiempo
+              real.</p>
+          </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="ficha" id="decada-2020">
+          <img src="1940 a 2020/2020.jfif" alt="Inteligencia Artificial">
+          <div class="texto">
+            <h3>Década de 2020</h3>
+            <p><strong>Contexto:</strong> Avances en inteligencia artificial, big data, computación cuántica y redes 5G.
+            </p>
+            <p><strong>Ejemplos:</strong> Chips con IA integrada (Apple M1, Google TPU), auge de la realidad virtual y
+              aumentada.</p>
+            <p><strong>Características:</strong> Hardware más especializado y eficiente energéticamente, con foco en la
+              IA y la nube.</p>
+            <p><strong>Impacto:</strong> La tecnología redefine industrias enteras, desde la medicina hasta el
+              entretenimiento.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer container">
+    <p>Proyecto escolar — Más allá de la pantalla © 2025</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.year');
+    const fichas = document.querySelectorAll('.ficha');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Ocultar todas
+        fichas.forEach(f => f.classList.remove('active'));
+        // Mostrar la que corresponde
+        const year = btn.dataset.year;
+        const ficha = document.getElementById(`decada-${year}`);
+        if (ficha) ficha.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
